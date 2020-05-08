@@ -1,0 +1,30 @@
+<view class='movie' wx:for="{{movieList}}" wx:key="id">
+	<image class="movie-img" src="{{item.images.small}}"></image>
+	<view class="movie-info">
+		<view class="movie-title">{{ item.title }}</view>
+		<view>
+			<text space="emsp">导演:</text>
+			<text wx:for="{{item.directors}}" wx:key="id" space="emsp"> {{item.name}}</text>
+		</view>
+		<view>
+			<text space="emsp">观众评分:</text>
+			<text class="movie-rating" space="emsp"> {{item.rating.average}}</text>
+		</view>
+		<view>
+			<text space="emsp">主演:</text>
+			<text wx:for="{{item.casts}}" wx:key="id" space="emsp"> {{item.name}}</text>
+		</view>
+		<view>
+			<text space="emsp">类型:</text>
+			<text wx:for="{{item.genres}}" wx:key="id" space="emsp"> {{item}}</text>
+		</view>
+		<view>
+			<text space="emsp">上映时间:</text>
+			<text wx:for="{{item.pubdates}}" wx:key="id" space="emsp"> {{item}}</text>
+		</view>
+		<view>
+			<text space="emsp">片长:</text>
+			<text wx:for="{{item.durations}}" wx:key="id" space="emsp"> {{item}}</text>
+		</view>
+	</view>
+</view>

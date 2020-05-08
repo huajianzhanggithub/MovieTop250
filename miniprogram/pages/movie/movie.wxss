@@ -1,0 +1,32 @@
+/* pages/movie/movie.wxss */
+.movie{
+  background-color: #5BE472;
+  height: 550rpx;
+  display: flex;
+  padding: 10rpx;
+  border: 10rpx solid #E67A17;
+  align-items: center;
+}
+
+.movie-img{
+  height: 400rpx;
+  width: 275rpx;
+  margin-right: 3rpx;
+}
+
+.movie-info{
+  flex: 1;
+}
+
+.movie-title{
+  text-align: center;
+  color: #000000;
+  font-size: 40rpx;
+  font-weight: bolder;
+  margin-bottom: 3rpx;
+  margin-top: 3rpx;
+}
+
+.movie-rating{
+  color: #22359D;
+}
