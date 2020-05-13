@@ -3,28 +3,29 @@
 	<view class="movie-info">
 		<view class="movie-title">{{ item.title }}</view>
 		<view>
-			<text space="emsp">导演:</text>
-			<text wx:for="{{item.directors}}" wx:key="id" space="emsp"> {{item.name}}</text>
+			<text class="introduce" space="emsp">导演:</text>
+			<text wx:for="{{item.directors}}" wx:key="id" space="emsp">{{item.name}}</text>
 		</view>
 		<view>
-			<text space="emsp">观众评分:</text>
-			<text class="movie-rating" space="emsp"> {{item.rating.average}}</text>
+			<text class="introduce" space="emsp">观众评分:</text>
+			<text class="movie-rating" space="emsp">{{item.rating.average}}</text>
 		</view>
 		<view>
-			<text space="emsp">主演:</text>
-			<text wx:for="{{item.casts}}" wx:key="id" space="emsp"> {{item.name}}</text>
+			<text class="introduce" space="emsp">主演:</text>
+			<view wx:for="{{item.casts}}" wx:key="id">{{item.name}}</view>
 		</view>
 		<view>
-			<text space="emsp">类型:</text>
+			<text class="introduce" space="emsp">类型:</text>
 			<text wx:for="{{item.genres}}" wx:key="id" space="emsp"> {{item}}</text>
 		</view>
 		<view>
-			<text space="emsp">上映时间:</text>
-			<text wx:for="{{item.pubdates}}" wx:key="id" space="emsp"> {{item}}</text>
+			<text class="introduce" space="emsp">上映时间:</text>
+			<view wx:for="{{item.pubdates}}" wx:key="id" space="emsp"> {{item}}</view>
 		</view>
 		<view>
-			<text space="emsp">片长:</text>
-			<text wx:for="{{item.durations}}" wx:key="id" space="emsp"> {{item}}</text>
+			<text class="introduce" space="emsp">片长:</text>
+			<view wx:for="{{item.durations}}" wx:key="id" space="emsp"> {{item}}</view>
 		</view>
+		<button class="movie-comment" bindtap="gotoComment" data-movieid="{{item.id}}">评价</button>
 	</view>
 </view>

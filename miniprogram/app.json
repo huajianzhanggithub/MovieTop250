@@ -4,6 +4,7 @@
     "pages/profile/profile",
     "pages/index/index",
     "pages/userConsole/userConsole",
+    "pages/comment/comment",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
     "pages/addFunction/addFunction",

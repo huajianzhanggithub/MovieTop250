@@ -1,0 +1,31 @@
+<!--pages/comment/comment.wxml-->
+<view>
+	<view class="detail-container" style="background: url({{detail.images.large}}) no-repeat top/cover"></view>
+	<view class="detail-mask"></view>
+	<view class="detail-info">
+		<image class="detail-image" src="{{detail.images.large}}" mode="heightFix"></image>
+		<view class="detail">
+			<view class="detail-title">{{detail.title}}</view>
+			<view>{{detail.original_title}}</view>
+			<view class="detail-rating">平均分: {{detail.rating.average}}</view>
+			<view>
+				<text>制片国家/地区: </text>
+				<inline-view wx:for="{{detail.countries}}" wx:key="id">{{item}}</inline-view>
+			</view>
+			<view>
+				<text>片长: </text>
+				<view wx:for="{{detail.durations}}" wx:key="id">{{item}}</view>
+			</view>
+			<view>
+				<text>导演: </text>
+				<inline-view wx:for="{{detail.directors}}" wx:key="id">{{item.name}}</inline-view>
+			</view>
+		</view>
+		<van-notice-bar class="detail-summary" wrapable scrollable="false" text="{{detail.summary}}" />
+		<van-field class="twospan field" type="{{area}}" value="{{ content }}" autosize="{{true}}" placeholder="请输入评论内容..." border="{{ true }}" bind:change="onContentChange" />
+		<van-rate class="twospan" value="{{ score }}" bind:change="onScoreChange" />
+		<image class="twospan" src="{{item}}" wx:for="{{images}}" wx:key="index" mode="aspectFit"></image>
+		<van-button class="twospan upload" type="info" size="small" bindtap="uploadImg">上传图片</van-button>
+		<van-button class="twospan" type="primary" size="large" bindtap="submit">提交评价</van-button>
+	</view>
+</view>

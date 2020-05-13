@@ -1,0 +1,68 @@
+/* pages/comment/comment.wxss */
+.detail-container {
+  height: minmax(400rpx, auto);
+  filter: blur(40rpx);
+  opacity: 0.6;
+}
+
+.detail-mask {
+  height: 400rpx;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  z-index: -1;
+}
+
+.detail-info {
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 400rpx;
+  width: 100%;
+  align-items: center;
+}
+
+.detail-image {
+  height: 400rpx;
+}
+
+.detail-summary {
+  text-indent: 60rpx;
+  grid-column-start: 2 span;
+}
+
+.twospan {
+  grid-column-start: 2 span;
+  justify-self: center;
+  margin-bottom: 20rpx;
+}
+
+.field {
+  width: 750rpx;
+}
+
+.upload {
+  margin-bottom: 20rpx;
+}
+
+.detail {
+  color: white;
+}
+
+.detail view {
+  font-size: 30rpx;
+}
+
+.detail .detail-title {
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+
+.detail .detail-rating {
+  font-size: 32rpx;
+  color: orangered;
+}
